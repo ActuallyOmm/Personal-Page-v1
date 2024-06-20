@@ -1,16 +1,16 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 function Header() {
   return (
-    <header className="bg-customDarkPurple text-white py-6">
-      <div className="container mx-auto flex flex-col items-center justify-between space-y-4 ">
+    <header className="bg-black text-white ">
+      <div className=" mx-auto flex flex-col items-center justify-between space-y-4 font-bold">
         <p>Omm's Project Portfolio</p>
       </div>
-      <div>
+
+      <div className=" col-auto flex justify-evenly">
+        <Link href="/"> Homepage </Link>
         <Link href="/about"> About </Link>
         <Link href="/contact"> Contact </Link>
-        <Link href="/"> Homepage </Link>
       </div>
     </header>
   );

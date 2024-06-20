@@ -20,6 +20,9 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: black;
 }
+.skill {
+  @apply bg-customPurple text-white font-bold  rounded-2xl cursor-pointer hover:bg-customDarkPurple text-pretty px-4;
+}
 
 @layer utilities {
   .text-balance {
