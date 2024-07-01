@@ -7,9 +7,9 @@ function Header() {
         <p>Omm's Project Portfolio</p>
       </div>
 
-      <div className=" col-auto flex justify-evenly">
+      <div className="col-auto flex justify-evenly">
         <Link href="/"> Homepage </Link>
-        <Link href="/about"> About </Link>
+        <Link href="/project">Projects</Link>
         <Link href="/contact"> Contact </Link>
       </div>
     </header>
