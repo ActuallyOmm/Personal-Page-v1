@@ -8,7 +8,7 @@ const ProjectTile = ({ title, description, skills, id }) => {
     <>
       <div
         key={id}
-        className="relative rounded-xl dark:bg-customPeach mx-auto p-2 sm:w-92 size-auto flex flex-col overflow-hidden auto-cols-auto"
+        className="relative items-center rounded-xl dark:bg-customPeach mx-auto p-2 sm:w-92 size-auto flex flex-col overflow-hidden auto-cols-auto"
       >
         <Image
           className="flex justify-center items-center  w-12 h-12  rounded-full"
