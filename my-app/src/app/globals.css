@@ -24,8 +24,15 @@ body {
   @apply bg-customPurple text-white font-bold  rounded-2xl cursor-pointer hover:bg-customDarkPurple text-pretty px-4;
 }
 .projectTiles {
-  @apply grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 mx-auto;
+  @apply grid sm:grid-cols-1 text-xs md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4 mx-auto;
 }
+.projectTitle {
+  @apply sm:text-sm underline font-bold break-words;
+}
+.projectDesc {
+  @apply sm:text-xs;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -12,7 +12,6 @@ function index() {
         <Skills></Skills>
         <br></br>
         <Description></Description>
-
       <br></br>
       </div>
       

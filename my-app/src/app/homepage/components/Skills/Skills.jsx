@@ -20,7 +20,7 @@ async function getSkills() {
 export default async function Skills() {
   // Array for adding in Skills
   const arr = await getSkills();
-  console.log(arr);
+  //console.log(arr);
   return (
     <div class="">
       <figure class="relative flex items-center rounded-xl py-2 px-4 dark:bg-customPeach mx-auto">

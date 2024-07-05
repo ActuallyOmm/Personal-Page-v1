@@ -3,8 +3,7 @@ import Project from "./Project";
 
 function ProjectPage() {
   return (
-    <div className="justify-center text-center p-4">
-      My Projects
+    <div className="p-4 min-h-screen bg-customPurple ">
       <Project></Project>
     </div>
   );
