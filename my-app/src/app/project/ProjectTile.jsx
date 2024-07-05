@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
-const ProjectTile = ({ title, description, language, id }) => {
+const ProjectTile = ({ title, description, skills, id }) => {
+  const skillsArray = Object.entries(skills).map(
+    ([skill, level]) => `${skill}: ${level}`
+  );
   return (
     <>
       <div
@@ -16,9 +19,10 @@ const ProjectTile = ({ title, description, language, id }) => {
         ></Image>
         <h2 className="projectTitle">{title}</h2>
         <p className="projectDesc ">{description}</p>
+        <br></br>
         <p className="projectDesc ">
           <b> Skills: </b>
-          {language}
+          {skills}
         </p>
       </div>
     </>
