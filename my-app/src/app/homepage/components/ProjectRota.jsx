@@ -6,8 +6,9 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
+import Tile from "@/app/components/DRY/Tile";
 
-import ProjectTile from "@/app/project/ProjectTile";
 async function getProjects() {
   const res = await fetch(
     "http://127.0.0.1:8090/api/collections/projects/records?sort=-updated&limit=4",
@@ -40,30 +41,33 @@ async function getProjects() {
 export default async function ProjectRota() {
   const projects = await getProjects();
   return (
-    <div className=" relative overflow-hidden rounded-xl py-2 px-4 dark:bg-black">
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        autoplay={{
-          delay: 2500,
-        }}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className=" h-96 w-full rounded-lg"
-      >
-        {projects.map((project) => (
-          <SwiperSlide>
-            <ProjectTile
-              key={project.id}
-              title={project.name}
-              description={project.description}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <>
+      <div className="flex flex-col relative overflow-hidden rounded-xl py-4 px-4 align-top dark:bg-black size-auto ">
+        <div className="text-lg font-medium">
+          <h1>My favourite Projects</h1>
+        </div>
+        <div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            autoplay={{
+              delay: 2500,
+            }}
+            loop={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="rounded-xl"
+          >
+            {projects.map((project) => (
+              <SwiperSlide key={project.id} className="size-auto">
+                <Tile
+                  name={project.name}
+                  description={project.description}
+                ></Tile>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </>
   );
 }

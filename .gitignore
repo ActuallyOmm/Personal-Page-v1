@@ -1,7 +1,5 @@
-my-app/pb_data/logs.db
-my-app/pb_data/logs.db-shm
+
 my-app/pb_data/logs.db-wal
-my-app/pb_data/data.db
 my-app/pb_data/logs.db-shm
 my-app/pb_data/data.db-wal
 my-app/pb_data/data.db-shm

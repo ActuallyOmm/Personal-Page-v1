@@ -32,7 +32,9 @@ body {
 .projectDesc {
   @apply sm:text-xs;
 }
-
+.projectSkill {
+  @apply sm:text-xs align-bottom absolute bottom-0 w-full text-center p-2;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -12,7 +12,7 @@ function index() {
         <br></br>
         <Skills></Skills>
         <br></br>
-        <div className="flex justify-center xs:gap-10 md:gap-20 xs:flex-wrap md:flex-nowrap">
+        <div className="flex flex-row justify-center xs:gap-10 md:gap-20 xs:flex-wrap md:flex-nowrap ">
           <Description></Description>
           <ProjectRota></ProjectRota>
         </div>

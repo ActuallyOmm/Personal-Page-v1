@@ -17,7 +17,7 @@ const ProjectTile = ({ title, description, skills, id }) => {
         <h2 className="projectTitle">{title}</h2>
         <p className="projectDesc ">{description}</p>
         <br></br>
-        <p className="projectDesc ">
+        <p className="projectSkill">
           <b> Skills: </b>
           {skills}
         </p>
