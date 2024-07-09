@@ -3,7 +3,7 @@ import Image from "next/image";
 const Description = () => {
   return (
     <div className="">
-      <div className="rounded-xl py-2 px-4 dark:bg-customPeach size-auto">
+      <div className="rounded-xl py-2 px-4 dark:bg-customPeach size-auto ">
         <div className="text-lg font-medium">
           <h1>Who am I?</h1>
         </div>
