@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
 const ProjectTile = ({ title, description, skills, id }) => {
-  const skillsArray = Object.entries(skills).map(
-    ([skill, level]) => `${skill}: ${level}`
-  );
   return (
     <>
       <div

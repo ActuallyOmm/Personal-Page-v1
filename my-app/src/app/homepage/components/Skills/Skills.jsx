@@ -22,11 +22,11 @@ export default async function Skills() {
   const arr = await getSkills();
   //console.log(arr);
   return (
-    <div class="">
-      <figure class="relative flex items-center rounded-xl py-2 px-4 dark:bg-customPeach mx-auto">
-        <div class="text-lg font-medium">
+    <div className="">
+      <figure className="relative flex items-center rounded-xl py-2 px-4 dark:bg-customPeach mx-auto">
+        <div className="text-lg font-medium">
           <h1>My Current Skill Set:</h1>
-          <div class="flex flex-wrap gap-x-2 gap-y-2 text-center ">
+          <div className="flex flex-wrap gap-x-2 gap-y-2 text-center ">
             {arr.map((e) => (
               <SkillTile key={e.id} name={e.Skill_Name} />
             ))}
