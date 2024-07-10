@@ -15,7 +15,7 @@ const Description = () => {
           width="512"
           height="512"
         ></Image>
-        <div className="text-sm">
+        <div className="sm:text-sm md:text-base">
           <p>
             As mentioned in the box above, I'm Omm. I'm an aspiring software
             engineer in my 3rd year, studying Computer Science at the

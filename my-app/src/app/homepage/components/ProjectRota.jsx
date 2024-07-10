@@ -41,33 +41,39 @@ async function getProjects() {
 export default async function ProjectRota() {
   const projects = await getProjects();
   return (
-    <>
-      <div className="flex flex-col relative overflow-hidden rounded-xl py-4 px-4 align-top dark:bg-black size-auto ">
-        <div className="text-lg font-medium">
-          <h1>My favourite Projects</h1>
-        </div>
-        <div>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            autoplay={{
-              delay: 2500,
-            }}
-            loop={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="rounded-xl"
+    <div className="flex flex-col items-center justify-center relative overflow-hidden rounded-xl py-4 px-4 align-top dark:bg-customPeach size-auto ">
+      {/* <h1 className="text-lg font-medium">My favourite Projects</h1> */}
+
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        size
+        autoplay={{
+          delay: 2500,
+        }}
+        loop={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="h-full w-full rounded-lg"
+      >
+        {projects.map((project) => (
+          <SwiperSlide
+            key={project.id}
+            className="flex flex-col items-center justify-center w-full h-full rounded-xl dark:bg-customPurple p-4"
           >
-            {projects.map((project) => (
-              <SwiperSlide key={project.id} className="size-auto">
-                <Tile
-                  name={project.name}
-                  description={project.description}
-                ></Tile>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div>
-    </>
+            <Image
+              className="justify-center items-center sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-56 lg:h-56 rounded-full"
+              src="/cat.png"
+              alt=""
+              width="128"
+              height="128"
+            />
+            <h2 className="lg:text-xl md:text-base underline font-bold break-words">
+              {project.name}
+            </h2>
+            <p className=" lg:text-xl md:text-base">{project.description}</p>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
