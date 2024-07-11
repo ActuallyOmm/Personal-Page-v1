@@ -1,25 +1,26 @@
 import React from "react";
 import SkillTile from "./SkillTile";
-async function getSkills() {
-  const res = await fetch(
-    "http://127.0.0.1:8090/api/collections/Skills/records",
-    { cache: "no-store" }
-  );
-  const data = await res.json();
-  if (Array.isArray(data)) {
-    return data;
-  } else {
-    if (data.items && Array.isArray(data.items)) {
-      return data.items;
-    } else {
-      // If you can't find an array, return an empty array or handle accordingly
-      return [];
-    }
+import fs from "fs";
+import path from "path";
+import SkillClass from "@/app/components/DRY/SkillClass";
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "public", "sample_data.json");
+  const jsonData = fs.readFileSync(filePath, "utf8");
+  const data = JSON.parse(jsonData);
+
+  const myArray = [];
+  for (let i = 0; i < data.Skills.length; i++) {
+    const name = data.Skills[i].SkillName;
+    const skillObject = new SkillClass(i + 1, name);
+    myArray.push(skillObject);
   }
+  return myArray;
 }
+
 export default async function Skills() {
   // Array for adding in Skills
-  const arr = await getSkills();
+  const arr = await getStaticProps();
   //console.log(arr);
   return (
     <div className="">
@@ -28,7 +29,7 @@ export default async function Skills() {
           <h1>My Current Skill Set:</h1>
           <div className="flex flex-wrap gap-x-2 gap-y-2 text-center ">
             {arr.map((e) => (
-              <SkillTile key={e.id} name={e.Skill_Name} />
+              <SkillTile key={e.id} name={e.name} />
             ))}
           </div>
         </div>
