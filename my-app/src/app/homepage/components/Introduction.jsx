@@ -15,10 +15,10 @@ const Introduction = () => {
           <blockquote>
             <p className="text-lg font-medium">
               “Hi! My name is Omm. I am currently a third year Computer Science
-              Student, studying at the University of Surrey. I'd like to welcome
-              you to my personal portfolio website designed using NextJS. Have a
-              look around to see my most recent work! Apologies for any bugs,
-              still a work in progress!”
+              Student, studying at the University of Surrey. I&apos;d like to
+              welcome you to my personal portfolio website designed using
+              NextJS. Have a look around to see my most recent work! Apologies
+              for any bugs, still a work in progress!”
             </p>
           </blockquote>
         </div>

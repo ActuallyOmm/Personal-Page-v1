@@ -17,19 +17,19 @@ const Description = () => {
         ></Image>
         <div className="sm:text-sm md:text-base">
           <p>
-            As mentioned in the box above, I'm Omm. I'm an aspiring software
-            engineer in my 3rd year, studying Computer Science at the
-            Univerisity of Surrey. I'm from the South East of London, and have
-            been studying Computer Science throughout my years in academia.
+            As mentioned in the box above, I&apos;m Omm. I&apos;m an aspiring
+            software engineer in my 3rd year, studying Computer Science at the
+            Univerisity of Surrey. I&apos;m from the South East of London, and
+            have been studying Computer Science throughout my years in academia.
           </p>
           <br></br>
           <p>
-            Whilst learning, I've been able to further develop and refine my
-            abstraction skills within a programming setting. During my time at
-            sixth form, I created several projects that utilised OOP (i.e.,
-            BlackJack, Queue Testing System, etc...). As a result of this, I've
-            grown a liking to object oriented programming, especially in backend
-            development, when designing a web application.
+            Whilst learning, I&apos;ve been able to further develop and refine
+            my abstraction skills within a programming setting. During my time
+            at sixth form, I created several projects that utilised OOP (i.e.,
+            BlackJack, Queue Testing System, etc...). As a result of this,
+            I&apos;ve grown a liking to object oriented programming, especially
+            in backend development, when designing a web application.
           </p>
           <br></br>
           <p>
